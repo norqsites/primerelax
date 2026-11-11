@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Therapy | Prime Relax Spa</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/favicon.png">
+<meta name="description" content="Prime Relax Spa for Men in Umm Salal, Qatar. Relaxing massage, Moroccan bath and private treatment rooms. Men only.">
+<script>
+  document.documentElement.lang = "ar";
+  document.documentElement.dir = "rtl";
+  document.documentElement.classList.add("lang-pending");
+</script>
+
+<style>
+  html.lang-pending body {
+    visibility: hidden;
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&family=Tajawal:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=9">
+</head>
+<body class="inner" data-title-en="Services | Prime Relax Spa" data-title-ar="الخدمات | برايم ريلاكس سبا">
+<header id="hdr"><div class="announce" id="announce" hidden><div class="wrap"><span id="annText"></span><a class="annlink" id="annLink" target="_blank" rel="noopener"></a><button id="annClose" type="button" aria-label="Close">&times;</button></div></div><div class="wrap nav">
+<a href="index.html" class="logo"><svg viewBox="0 0 64 48" fill="#c9a45c"><path d="M32 2c5 8 6 17 0 28-6-11-5-20 0-28z"/><path d="M30 33C22 30 14 22 12 10c9 2 16 9 18 23zM34 33c8-3 16-11 18-23-9 2-16 9-18 23z"/><path d="M28 36C18 36 8 31 2 22c10-1 20 3 26 14zM36 36c10 0 20-5 26-14-10-1-20 3-26 14z"/><path d="M32 38c6 0 10 3 12 8H20c2-5 6-8 12-8z"/></svg><b data-i18n="Prime Relax Spa">PRIME <i>RELAX</i> SPA</b></a>
+<button class="lang" id="langBtn" type="button">العربية</button>
+<button class="burger" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">&#9776;</button>
+<nav id="menu" onclick="
+  if (
+    event.target.closest('.services-submenu a') ||
+    (event.target.closest('a') && !event.target.closest('.services-dropdown'))
+  ) {
+    this.classList.remove('open');
+  }
+">
+  <a href="index.html"  data-i18n="Home">Home</a>
+
+  <a href="about.html" data-i18n="About">About</a>
+
+ <div class="services-dropdown">
+
+ <div class="services-parent">
+  <a
+    href="services.html"
+    class="ddt"
+    data-i18n="Services"
+    onclick="
+      if (window.matchMedia('(max-width: 860px)').matches) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        const parent = this.closest('.services-dropdown');
+        parent.classList.toggle('open');
+      }
+    "
+  >
+    Services
+  </a>
+</div>
+
+  <div class="services-submenu">
+    <a href="services.html" data-i18n="All Services">All Services</a>
+    <a href="therapy.html" class="active" data-i18n="Therapy">Therapy</a>
+    <a href="care.html" data-i18n="Personal Care">Personal Care</a>
+    <a href="traditional.html" data-i18n="Moroccan Bath">Moroccan Bath</a>
+  </div>
+
+</div>
+
+  <a href="gallery.html" data-i18n="Gallery">Gallery</a>
+
+  <a href="contact.html" data-i18n="Contact">Contact</a>
+
+</nav>
+</div></header>
+<main class="therapy-page">
+
+  <!-- PAGE HERO -->
+  <section class="therapy-hero">
+    <div class="therapy-hero-bg"></div>
+    <div class="wrap therapy-hero-content">
+      <div class="eyebrow">THE ART OF RELAXATION</div>
+      <h1>Therapy &amp; Massage</h1>
+      <div class="rule"></div>
+      
+      <p data-i18n="Take a moment for yourself. Discover massage experiences
+        designed to ease everyday tension, restore comfort and
+        bring your mind and body back to balance.">
+Take a moment for yourself. Discover massage experiences
+        designed to ease everyday tension, restore comfort and
+        bring your mind and body back to balance.</p>
+      <a href="#treatments" class="btn fill">EXPLORE TREATMENTS</a>
+    </div>
+    <span class="therapy-hero-note">A MOMENT JUST FOR YOU · UMM SALAL</span>
+  </section>
+
+  <!-- INTRODUCTION -->
+  <!-- <section class="therapy-intro">
+    <div class="wrap">
+      <span class="eyebrow">YOUR TIME TO UNWIND</span>
+      <h2>Find the treatment<br>that feels right.</h2>
+      <p>
+        From traditional massage techniques to focused relaxation
+        treatments, explore our selection and choose the experience
+        that suits your needs.
+      </p>
+    </div>
+  </section> -->
+
+  <!-- TREATMENTS -->
+  <section class="therapy-treatments" id="treatments">
+    <div class="wrap">
+
+      <div class="therapy-section-heading">
+        <div>
+          <span class="eyebrow">OUR TREATMENTS</span>
+          <h2>Explore our massage collection</h2>
+        </div>
+        <span class="therapy-count">08 EXPERIENCES</span>
+      </div>
+
+      <div class="therapy-grid">
+
+        <article class="therapy-card" data-treatment="thai" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Read about Thai Massage">
+          <div class="therapy-image">
+            <img src="images/therapy/thai.jpg" alt="Thai massage treatment" loading="lazy">
+            <span class="therapy-number">01</span>
+          </div>
+          <div class="therapy-info">
+            <span class="therapy-label">TRADITIONAL TECHNIQUE</span>
+            <h3>Thai Massage</h3>
+            <p>A traditional massage combining assisted stretching and rhythmic pressure techniques to help release everyday tension and support flexibility.</p>
+            <span class="treatment-card-link">READ MORE <span>↗</span></span>
+          </div>
+        </article>
+
+        <article class="therapy-card" data-treatment="oil" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Read about Oil Massage">
+          <div class="therapy-image">
+            <img src="images/therapy/oil.jpg" alt="Relaxing oil massage" loading="lazy">
+            <span class="therapy-number">02</span>
+          </div>
+          <div class="therapy-info">
+            <span class="therapy-label">RELAXATION</span>
+            <h3>Oil Massage</h3>
+            <p>Unwind with a soothing massage using massage oils and flowing movements. A relaxing experience designed to ease everyday tension.</p>
+            <span class="treatment-card-link">READ MORE <span>↗</span></span>
+          </div>
+        </article>
+
+        <article class="therapy-card" data-treatment="cream" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Read about Cream Massage">
+          <div class="therapy-image">
+            <img src="images/therapy/cream.jpg" alt="Cream massage treatment" loading="lazy">
+            <span class="therapy-number">03</span>
+          </div>
+          <div class="therapy-info">
+            <span class="therapy-label">COMFORT &amp; CARE</span>
+            <h3>Cream Massage</h3>
+            <p>Enjoy a comfortable massage using a smooth cream that allows gentle movements across the body for a relaxing experience.</p>
+            <span class="treatment-card-link">READ MORE <span>↗</span></span>
+          </div>
+        </article>
+
+        
+<!-- HOT STONE MASSAGE -->
+<article class="therapy-card" data-treatment="hotstone" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Read about Hot Stone Massage">
+  <div class="therapy-image">
+    <img src="images/therapy/hotstone.jpg" alt="Hot stone massage treatment" loading="lazy">
+    <span class="therapy-number">04</span>
+  </div>
+
+  <div class="therapy-info">
+    <span class="therapy-label" data-i18n="WARMTH & RELAXATION">WARMTH &amp; RELAXATION</span>
+
+<h3 data-i18n="Hot Stone Massage">Hot Stone Massage</h3>
+
+<p data-i18n="A soothing massage using smooth, heated stones to provide gentle warmth, ease muscle tension and encourage deep relaxation.">A soothing massage using smooth, heated stones to provide gentle warmth, ease muscle tension and encourage deep relaxation.</p>
+    <span class="treatment-card-link">READ MORE <span>↗</span></span>
+  </div>
+</article>
+
+
+        <article class="therapy-card" data-treatment="arabic" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Read about Arabic Massage">
+          <div class="therapy-image">
+            <img src="images/therapy/arabic.jpg" alt="Arabic massage treatment" loading="lazy">
+            <span class="therapy-number">04</span>
+          </div>
+          <div class="therapy-info">
+            <span class="therapy-label">TRADITIONAL CARE</span>
+            <h3>Arabic Massage</h3>
+            <p>Discover a traditional massage experience with focused pressure and flowing techniques designed to help you relax and feel refreshed.</p>
+            <span class="treatment-card-link">READ MORE <span>↗</span></span>
+          </div>
+        </article>
+
+        <article class="therapy-card" data-treatment="sports" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Read about Sports Massage">
+          <div class="therapy-image">
+            <img src="images/therapy/sports.jpg" alt="Sports massage treatment" loading="lazy">
+            <span class="therapy-number">05</span>
+          </div>
+          <div class="therapy-info">
+            <span class="therapy-label">TARGETED TECHNIQUE</span>
+            <h3>Sports Massage</h3>
+            <p>A focused massage experience around areas of muscular tension and physical activity, helping support relaxation and recovery.</p>
+            <span class="treatment-card-link">READ MORE <span>↗</span></span>
+          </div>
+        </article>
+
+        <article class="therapy-card" data-treatment="head" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Read about Head Massage">
+          <div class="therapy-image">
+            <img src="images/therapy/head.jpg" alt="Head massage treatment" loading="lazy">
+            <span class="therapy-number">06</span>
+          </div>
+          <div class="therapy-info">
+            <span class="therapy-label">MOMENT OF CALM</span>
+            <h3>Head Massage</h3>
+            <p>Take a break from the everyday rush with a soothing head massage focused on relaxation and easing built-up tension.</p>
+            <span class="treatment-card-link">READ MORE <span>↗</span></span>
+          </div>
+        </article>
+
+        <article class="therapy-card" data-treatment="foot" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Read about Foot Massage">
+          <div class="therapy-image">
+            <img src="images/therapy/foot.jpg" alt="Foot massage treatment" loading="lazy">
+            <span class="therapy-number">07</span>
+          </div>
+          <div class="therapy-info">
+            <span class="therapy-label">REST &amp; REFRESH</span>
+            <h3>Foot Massage</h3>
+            <p>Give your feet some well-deserved attention with a relaxing massage focused on comfort after long and tiring days.</p>
+            <span class="treatment-card-link">READ MORE <span>↗</span></span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="therapy-cta">
+    <div class="wrap">
+      <span class="eyebrow">YOUR MOMENT STARTS HERE</span>
+      <h2>Ready to unwind?</h2>
+      <p>
+        Let us help you find the right treatment.
+        Contact us for details, availability and appointments.
+      </p>
+      <a class="btn fill" data-wa="Hello, I would like to enquire about your massage treatments and book an appointment.">
+        BOOK YOUR EXPERIENCE
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- REUSABLE TREATMENT POPUP -->
+<div class="treatment-modal" id="treatmentModal" aria-hidden="true">
+  <div class="treatment-modal-box" role="dialog" aria-modal="true" aria-labelledby="treatmentModalTitle">
+
+    <button class="treatment-modal-close" type="button" aria-label="Close popup">&times;</button>
+
+    <div class="treatment-modal-content" id="treatmentModalContent">
+      <!-- Treatment information is inserted here by JavaScript -->
+    </div>
+
+  </div>
+</div>
+
+
+<!-- THAI MASSAGE POPUP -->
+<div class="treatment-modal" id="treatmentModal" aria-hidden="true">
+
+  <div class="treatment-modal-box" role="dialog"
+       aria-modal="true"
+       aria-labelledby="treatmentModalTitle">
+
+    <button class="treatment-modal-close"
+            type="button"
+            aria-label="Close popup">
+      &times;
+    </button>
+
+    <div class="treatment-modal-content">
+
+      <span class="treatment-modal-label">
+        PRIME RELAX SPA FOR MEN
+      </span>
+
+      <span class="treatment-modal-number">
+        TREATMENT 01
+      </span>
+
+      <h2 id="treatmentModalTitle">Thai Massage</h2>
+
+      <p class="treatment-modal-subtitle">
+        An ancient approach to relaxation and bodywork.
+      </p>
+
+      <div class="treatment-modal-divider"></div>
+
+      <div class="treatment-modal-section">
+        <h3>ABOUT THE TREATMENT</h3>
+
+        <p>
+          Thai Massage, also known as <em>Nuad Bo-Rarn</em>,
+          meaning "ancient massage", is a traditional Thai
+          bodywork practice. It draws on the traditional concept
+          of energy pathways known as SEN lines, using rhythmic
+          pressure and assisted stretching as part of the treatment.
+        </p>
+
+        <p>
+          Unlike many massage styles that primarily use gliding
+          movements, Thai Massage may involve a combination of
+          compression, gentle stretching and yoga-inspired
+          positions. The experience is designed to help ease
+          everyday muscle tension and encourage relaxation.
+        </p>
+      </div>
+
+      <div class="treatment-modal-section">
+        <h3>TECHNIQUES USED</h3>
+
+        <ul>
+          <li>
+            <strong>Rhythmic compression:</strong>
+            Steady, controlled pressure applied to selected areas
+            of the body.
+          </li>
+
+          <li>
+            <strong>Assisted stretching:</strong>
+            Guided stretches that help support flexibility and
+            comfortable movement.
+          </li>
+
+          <li>
+            <strong>Yoga-inspired movements:</strong>
+            Supported positions and movements incorporated into
+            traditional Thai massage.
+          </li>
+        </ul>
+      </div>
+
+      <div class="treatment-modal-section">
+        <h3>POTENTIAL BENEFITS</h3>
+
+        <ul>
+          <li>Helps ease everyday muscle tension.</li>
+          <li>Supports flexibility and range of motion.</li>
+          <li>Encourages relaxation and a sense of well-being.</li>
+        </ul>
+      </div>
+
+      <div class="treatment-modal-pressure">
+        <span>PRESSURE LEVEL</span>
+        <strong>Medium to Firm</strong>
+      </div>
+
+      <p class="treatment-modal-note">
+        Treatment techniques and pressure can be adjusted
+        according to individual comfort and preference.
+      </p>
+
+    </div>
+  </div>
+</div>
+<footer><div class="wrap">
+<div class="fgrid">
+<div><div class="logo" style="margin-bottom:14px"><svg viewBox="0 0 64 48" fill="#c9a45c"><path d="M32 2c5 8 6 17 0 28-6-11-5-20 0-28z"/><path d="M30 33C22 30 14 22 12 10c9 2 16 9 18 23zM34 33c8-3 16-11 18-23-9 2-16 9-18 23z"/><path d="M28 36C18 36 8 31 2 22c10-1 20 3 26 14zM36 36c10 0 20-5 26-14-10-1-20 3-26 14z"/><path d="M32 38c6 0 10 3 12 8H20c2-5 6-8 12-8z"/></svg><b>PRIME <i>RELAX</i> SPA</b></div><p>Men’s wellness and relaxation in Umm Salal, Qatar.<br><span class="ar">برايم ريلاكس سبا للرجال</span></p><div class="fsocial">
+    <h4 data-i18n="Follow Us">Follow Us</h4>
+
+    <div class="soc">
+<a id="sIg" target="_blank" rel="noopener" aria-label="Instagram">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <defs>
+        <linearGradient id="igGradient" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0%" stop-color="#FFD600"/>
+          <stop offset="50%" stop-color="#FF0069"/>
+          <stop offset="100%" stop-color="#7638FA"/>
+        </linearGradient>
+      </defs>
+      <rect x="3" y="3" width="18" height="18" rx="5"
+            fill="none" stroke="url(#igGradient)" stroke-width="2"/>
+      <circle cx="12" cy="12" r="4"
+              fill="none" stroke="url(#igGradient)" stroke-width="2"/>
+      <circle cx="17.5" cy="6.8" r="1.2" fill="#FF0069"/>
+    </svg>
+  </a>
+    <!-- Facebook -->
+  <a id="sFb" target="_blank" rel="noopener" aria-label="Facebook">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="#1877F2"
+        d="M24 12a12 12 0 1 0-13.875 11.85v-8.38H7.08V12h3.045V9.356c0-3.005 1.79-4.665 4.53-4.665 1.312 0 2.685.234 2.685.234v2.953h-1.513c-1.49 0-1.955.925-1.955 1.874V12h3.328l-.532 3.47h-2.796v8.38A12.003 12.003 0 0 0 24 12z"/>
+    </svg>
+  </a>
+  <!-- <a id="sFb" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.2C16.700 2.200 15.700 2 14.600 2 12.200 2 10.500 3.500 10.500 6.200v2.300H8v3.500h2.500V22H14v-10h2.700l.4-3.500H14z"/></svg></a> -->
+      <!-- Keep your existing Instagram and Facebook links here -->
+    </div>
+  </div></div>
+ 
+<div><h4>Explore</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+<div class="fdetails">
+
+  <div class="fcontact">
+    <h4 data-i18n="Contact & Hours">Contact & Hours</h4>
+
+    <ul>
+      <li>
+        <span data-i18n="Phone / WhatsApp">Phone / WhatsApp</span>
+        <a href="tel:+97474040509" dir="ltr" class="footer-phone">
+  +974 7404 0509
+</a>
+      </li>
+
+       <li>
+  <span data-i18n="Email">Email</span>
+  <a href="mailto:info@primerelaxspaqa.com" dir="ltr" class="footer-phone">
+    info@primerelaxspaqa.com
+  </a>
+</li>
+
+      <li>
+        <span class="lbl">Opening Hours</span>
+          <p id="hours"></p>
+      </li>
+<li>
+  <span data-i18n="Location">Location</span>
+
+  <address class="footer-address">
+    <span>Rawdat Al Qatfiya St, Umm Salal Muhammed</span>
+    <span>Building no 30</span>
+    <span>Street no :70</span>
+    <span>Zone :549</span>
+  </address>
+</li>
+
+    </ul>
+  </div>
+
+ 
+
+</div>
+<!-- <div><h4>Follow Us</h4>
+<div class="soc">
+<a id="sIg" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 8.2A3.2 3.2 0 1112 8.8a3.2 3.2 0 010 6.4zM17.3 5.5a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4zM7.5 2h9A5.5 5.5 0 0122 7.5v9a5.5 5.5 0 01-5.5 5.5h-9A5.5 5.5 0 012 16.5v-9A5.5 5.5 0 017.5 2zm0 1.8A3.7 3.7 0 003.8 7.5v9a3.7 3.7 0 003.7 3.7h9a3.7 3.7 0 003.7-3.7v-9a3.7 3.7 0 00-3.7-3.7z"/></svg></a>
+<a id="sFb" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.2C16.700 2.200 15.700 2 14.600 2 12.200 2 10.500 3.500 10.500 6.200v2.300H8v3.500h2.500V22H14v-10h2.700l.4-3.500H14z"/></svg></a>
+</div></div> -->
+</div>
+<div class="copy"><span>&copy; <span id="yr"></span> Prime Relax Spa for Men. All rights reserved.</span><span><a href="#" data-dlg="privacy">Privacy Policy</a> &nbsp;|&nbsp; <a href="#" data-dlg="terms">Terms &amp; Conditions</a></span></div>
+</div></footer>
+<a class="wa" data-wa="Hello, I would like to know more about Prime Relax Spa." aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C8.800 3 3 8.800 3 16c0 2.300.6 4.500 1.700 6.400L3 29l6.800-1.700A13 13 0 0016 29c7.200 0 13-5.800 13-13S23.200 3 16 3zm0 23.700c-2 0-3.900-.6-5.500-1.600l-.4-.2-4 1 1.100-3.900-.3-.4A10.700 10.700 0 1126.700 16c0 5.900-4.800 10.700-10.700 10.700zm5.900-8c-.3-.2-1.900-.9-2.200-1-.3-.1-.5-.2-.7.200-.2.300-.8 1-1 1.200-.2.200-.4.200-.7.100-1.900-.9-3.100-1.700-4.300-3.800-.3-.6.300-.5.900-1.700.1-.2 0-.4 0-.5l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.100-.9.400-.3.300-1.200 1.200-1.200 2.800s1.200 3.300 1.400 3.500c.2.200 2.300 3.600 5.600 5 2.100.9 2.900 1 3.900.8.600-.1 1.900-.8 2.200-1.600.3-.8.300-1.400.2-1.600-.1-.2-.3-.3-.6-.4z"/></svg></a>
+<!-- PRIVACY POLICY -->
+<dialog id="privacy">
+  <h3 data-i18n="PP Title">Privacy Policy</h3>
+
+  <p data-i18n="PP Intro">
+    Prime Relax Spa for Men respects your privacy and is committed
+    to protecting your personal information. This policy explains
+    how we collect, use and protect information when you visit
+    our website or contact us.
+  </p>
+
+  <p><strong data-i18n="PP S1">1. Information We Collect</strong></p>
+  <p data-i18n="PP D1">
+    We may collect information you voluntarily provide, such as
+    your name, phone number, appointment details and any other
+    information you share when making an enquiry or booking.
+    We may also receive information about your device and website
+    usage through basic technical records.
+  </p>
+
+  <p><strong data-i18n="PP S2">2. How We Use Your Information</strong></p>
+  <p data-i18n="PP D2">
+    Your information is used to respond to enquiries, arrange
+    appointments, provide requested services and improve our
+    customer experience. Any health-related information you
+    voluntarily share before a treatment is used only where
+    necessary for the safe provision of that service.
+  </p>
+
+  <p><strong data-i18n="PP S3">3. WhatsApp &amp; Third-Party Services</strong></p>
+  <p data-i18n="PP D3">
+    Our website allows you to contact us through WhatsApp.
+    When you use this service, your communication is also
+    subject to WhatsApp's own privacy policy. We may also rely
+    on website hosting and other service providers to operate
+    our website. These providers may process certain information
+    as necessary to provide their services.
+  </p>
+
+  <p><strong data-i18n="PP S4">4. Data Protection &amp; Retention</strong></p>
+  <p data-i18n="PP D4">
+    We take reasonable measures to protect personal information
+    against unauthorised access, loss or misuse. Information is
+    retained only for as long as necessary for the purposes
+    described in this policy or as required by applicable law.
+  </p>
+
+  <p><strong data-i18n="PP S5">5. Cookies &amp; Website Usage</strong></p>
+  <p data-i18n="PP D5">
+    Our website may use essential cookies or similar technologies
+    to support basic website functionality. If additional
+    analytics or tracking technologies are used, relevant
+    information about them will be provided.
+  </p>
+
+  <p><strong data-i18n="PP S6">6. Your Privacy Rights</strong></p>
+  <p data-i18n="PP D6">
+    Subject to applicable laws, you may request access to,
+    correction of or deletion of your personal information.
+    You may also withdraw consent or object to certain
+    processing where applicable.
+  </p>
+
+  <p><strong data-i18n="PP S7">7. Changes to This Policy</strong></p>
+  <p data-i18n="PP D7">
+    We may update this Privacy Policy from time to time.
+    Any changes will be published on this website.
+  </p>
+
+  <p><strong data-i18n="PP S8">8. Contact Us</strong></p>
+  <p data-i18n="PP D8">
+    If you have any questions about this Privacy Policy or
+    how your information is handled, please contact Prime
+    Relax Spa for Men through our WhatsApp contact option.
+  </p>
+
+  <p><small data-i18n="PP Updated">Last updated: November 2026</small></p>
+
+  <form method="dialog">
+    <button class="btn" data-i18n="PP Close">Close</button>
+  </form>
+</dialog>
+
+
+<!-- TERMS & CONDITIONS -->
+<dialog id="terms">
+  <h3 data-i18n="TC Title">Terms &amp; Conditions</h3>
+
+  <p data-i18n="TC Intro">
+    Welcome to Prime Relax Spa for Men. By visiting our website,
+    contacting us or using our services, you agree to the following
+    Terms &amp; Conditions.
+  </p>
+
+  <p><strong data-i18n="TC S1">1. Services &amp; Eligibility</strong></p>
+  <p data-i18n="TC D1">
+    Prime Relax Spa provides massage, wellness and personal care
+    services exclusively for male clients. All services are subject
+    to availability and suitability. We reserve the right to refuse
+    or discontinue a service where necessary.
+  </p>
+
+  <p><strong data-i18n="TC S2">2. Appointments &amp; Bookings</strong></p>
+  <p data-i18n="TC D2">
+    Appointments are recommended and are subject to confirmation
+    by our team. Please provide accurate contact and booking
+    information. A booking enquiry does not guarantee an appointment
+    until it has been confirmed by the spa.
+  </p>
+
+  <p><strong data-i18n="TC S3">3. Cancellations &amp; Rescheduling</strong></p>
+  <p data-i18n="TC D3">
+    If you are unable to attend an appointment, please contact us
+    as early as possible to cancel or reschedule. Any applicable
+    cancellation or rescheduling conditions will be communicated
+    when making your booking.
+  </p>
+
+  <p><strong data-i18n="TC S4">4. Arrival &amp; Late Appointments</strong></p>
+  <p data-i18n="TC D4">
+    Guests are requested to arrive on time for their appointments.
+    Late arrivals may result in a shortened treatment to avoid
+    affecting subsequent bookings. The full appointment charge
+    may still apply.
+  </p>
+
+  <p><strong data-i18n="TC S5">5. Health &amp; Treatment Safety</strong></p>
+  <p data-i18n="TC D5">
+    Please inform our staff before your treatment of any relevant
+    medical conditions, allergies, injuries or other health
+    concerns. Certain treatments may not be suitable for everyone.
+    We reserve the right to recommend an alternative treatment
+    or decline a service where safety is a concern.
+  </p>
+
+  <p><strong data-i18n="TC S6">6. Payments, Prices &amp; Offers</strong></p>
+  <p data-i18n="TC D6">
+    Service prices and promotional offers are subject to change.
+    The applicable price will be confirmed at the time of booking.
+    Offers cannot be combined unless expressly stated. Any
+    additional payment or refund conditions will be communicated
+    before the service.
+  </p>
+
+  <p><strong data-i18n="TC S7">7. Customer Conduct</strong></p>
+  <p data-i18n="TC D7">
+    All guests are expected to behave respectfully towards staff
+    and other customers. Inappropriate behaviour, harassment,
+    misconduct or unlawful activity will not be tolerated.
+    Management reserves the right to refuse or discontinue
+    services in such circumstances.
+  </p>
+
+  <p><strong data-i18n="TC S8">8. Personal Belongings</strong></p>
+  <p data-i18n="TC D8">
+    Guests are responsible for their personal belongings while
+    visiting the spa. Please take care of valuables and personal
+    items during your visit.
+  </p>
+
+  <p><strong data-i18n="TC S9">9. Website Information</strong></p>
+  <p data-i18n="TC D9">
+    We make reasonable efforts to ensure that the information
+    displayed on our website, including service descriptions,
+    images and prices, is accurate and up to date. However,
+    availability, offers and service details may change without
+    prior notice.
+  </p>
+
+  <p><strong data-i18n="TC S10">10. Changes to These Terms</strong></p>
+  <p data-i18n="TC D10">
+    Prime Relax Spa reserves the right to update these
+    Terms &amp; Conditions when necessary. Updated terms will
+    be published on this website.
+  </p>
+
+  <p><strong data-i18n="TC S11">11. Applicable Law</strong></p>
+  <p data-i18n="TC D11">
+    These Terms &amp; Conditions are subject to the applicable
+    laws and regulations of the State of Qatar.
+  </p>
+
+  <p><small data-i18n="TC Updated">Last updated: November 2026</small></p>
+
+  <form method="dialog">
+    <button class="btn" data-i18n="TC Close">Close</button>
+  </form>
+</dialog>
+
+<script>document.write('<script src="js/config.js?v='+Date.now()+'"><\/script><script src="js/script.js?v='+Date.now()+'"><\/script>')</script>
+</body>
+</html>
