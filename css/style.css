@@ -215,6 +215,28 @@ nav>a,.ddt{position:relative}
 
 /* new hero */
 
+/* ==========================================
+   PRIME RELAX - BLACK NAVBAR
+========================================== */
+
+#hdr,
+#hdr.top,
+header.top {
+
+    background: #000000 !important;
+    background-color: #000000 !important;
+}
+
+/* Navbar inner containers */
+
+#hdr nav,
+#hdr .navbar,
+#hdr .nav {
+
+    background: #000000 !important;
+    background-color: #000000 !important;
+}
+
 /* =========================================
    PRIME RELAX SPA — HOME HERO
 ========================================= */
@@ -246,7 +268,7 @@ nav>a,.ddt{position:relative}
     inset: -6%;
     z-index: 0;
 
-    background-image: url("../images/herobg1.jpg");
+    background-image: url("../images/hero10.jpg");
     background-size: cover;
     background-position: center 65%;
     background-repeat: no-repeat;
@@ -261,12 +283,12 @@ nav>a,.ddt{position:relative}
     inset: 0;
     z-index: 1;
 
-    background: linear-gradient(
+    /* background: linear-gradient(
         90deg,
         rgba(5, 13, 27, .88) 0%,
         rgba(5, 13, 27, .65) 42%,
         rgba(5, 13, 27, .12) 100%
-    );
+    ); */
 }
 
 /* Hero content */
@@ -331,139 +353,452 @@ nav>a,.ddt{position:relative}
     gap: 14px;
 }
 
-/* =========================================
-   MOBILE HERO
-========================================= */
+/* ==========================================
+   PRIME RELAX - MOBILE HERO FINAL ADJUSTMENT
+   MOBILE ONLY - DESKTOP REMAINS UNCHANGED
+========================================== */
 
 @media (max-width: 860px) {
 
+    /* HERO SECTION */
+
     .hero2 {
-        min-height: 600px;
+        position: relative;
+        min-height: 700px;
         height: 100svh;
-        max-height: 850px;
-        align-items: center;
+        max-height: 950px;
+
+        display: flex;
+        align-items: stretch;
+
+        overflow: hidden;
     }
 
-    .hero-content {
+    /* BACKGROUND IMAGE */
+
+    .hero2 .hero-bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        overflow: hidden;
+    }
+
+    .hero2 .hero-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("../images/heroimg.jpg");
+    background-size: cover;
+    background-position: center 35%;
+    background-repeat: no-repeat;
+
+    transform: scale(1.18);
+    animation: mobileHeroZoomOut 18s ease-in-out infinite alternate;
+    will-change: transform;
+}
+
+    /* OVERLAY */
+
+    .hero2 .hero-bg::after {
+
+        /* Keep upper building signage bright and visible.
+           Darken only the lower area behind the text. */
+
+        background:
+            linear-gradient(
+                to top,
+                rgba(3, 9, 18, 0.88) 0%,
+                rgba(3, 9, 18, 0.65) 30%,
+                rgba(3, 9, 18, 0.20) 55%,
+                rgba(3, 9, 18, 0.04) 78%,
+                rgba(3, 9, 18, 0.08) 100%
+            );
+
+    }
+
+    /* CONTENT POSITION */
+
+    .hero2 .hero-content {
+
+        position: relative;
+        z-index: 2;
+
         display: flex;
         flex-direction: column;
-        justify-content: center;
+
+        justify-content: flex-end;
         align-items: flex-start;
 
         width: 100%;
         min-height: 100%;
+        box-sizing: border-box;
 
-        padding-top: calc(120px + env(safe-area-inset-top, 0px));
-        padding-bottom: 80px;
+        /*
+          Push content down.
+          Keep the building name clear.
+        */
+
+        padding-top: 300px;
+        padding-bottom: 75px;
 
         text-align: left;
         direction: ltr;
     }
 
-    .hero-content h1 {
-        font-size: clamp(43px, 11vw, 64px);
+    /* EYEBROW */
+
+    .hero2 .hero-content .eyebrow {
+        font-size: 11px;
+        letter-spacing: 0.12em;
+
+        line-height: 1.7;
+        margin-bottom: 12px;
+    }
+
+    /* MAIN HEADING */
+
+    .hero2 .hero-content h1 {
+
+        font-size: clamp(40px, 9vw, 50px);
+        line-height: 1.25;
+
+        max-width: 100%;
+        margin-bottom: 12px;
+
         text-align: left;
     }
 
-    .hero-content .lead {
-        max-width: 460px;
-        font-size: 15px;
+    /* ARABIC TAGLINE - KEEP HORIZONTAL */
+
+    html[dir="rtl"] .hero2 .hero-content .hero-tagline {
+
+        display: block;
+
+        direction: rtl;
+        unicode-bidi: plaintext;
+
+        white-space: nowrap;
+        width: max-content;
+        max-width: 100%;
+
+        font-family: 'Tajawal', Arial, sans-serif;
+
+        font-size: clamp(13px, 3.8vw, 16px);
+        letter-spacing: 0;
+
+        line-height: 1.7;
+        text-align: right;
+
+        margin-top: 8px;
+        margin-bottom: 16px;
     }
 
-    .hero-actions {
-        justify-content: flex-start;
-        margin-top: 24px;
-    }
+    /* REMOVE PURPLE-MARKED DESCRIPTION ON MOBILE */
 
-    /* Slow mobile image movement */
-    /* .hero-bg::before {
-        background-position: center 50%;
-        transform: scale(1.12) translateX(3%);
-        animation: spaHeroPan 30s ease-in-out infinite alternate;
-        will-change: transform;
+    /* .hero2 .hero-content .lead {
+        display: none !important;
     } */
-.hero-bg::before {
-    background-position: center 50%;
-    transform: scale(1.25) translateX(6%);
-animation: spaHeroPan 70s linear forwards;
-    will-change: transform;
-}
 
-    /* Slightly stronger mobile overlay */
-    .hero-bg::after {
-        background: linear-gradient(
-            90deg,
-            rgba(5,13,27,.82),
-            rgba(5,13,27,.40)
-        );
+    /* BUTTONS */
+
+    .hero2 .hero-actions {
+
+        display: flex;
+
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        justify-content: flex-start;
+        align-items: center;
+
+        width: 100%;
+        max-width: 420px;
+
+        gap: 10px;
+        margin-top: 18px;
     }
+
+    .hero2 .hero-actions .btn {
+
+        flex: 1 1 0;
+        min-width: 0;
+
+        width: auto;
+
+        padding: 13px 10px;
+
+        font-size: 12px;
+        line-height: 1.5;
+
+        text-align: center;
+        white-space: nowrap;
+    }
+
 }
 
-/* =========================================
-   SMALL MOBILE
-========================================= */
+
+/* ==========================================
+   SMALL MOBILE PHONES
+========================================== */
 
 @media (max-width: 480px) {
 
     .hero2 {
-        min-height: 620px;
-        height: 80svh;
+        min-height: 680px;
+        height: 100svh;
     }
 
-    .hero-content {
-        padding-top: calc(190px + env(safe-area-inset-top, 0px));
-        padding-bottom: 85px;
+  } 
+@media (max-width: 480px) {
+
+    .hero2 .hero-bg::before {
+
+        /* Keep the phone-specific image crop */
+        background-size: cover;
+        background-position: 74% center;
+
+        /* Same animation as medium screens */
+        transform: scale(1.18);
+
+        animation: mobileHeroZoomOut
+                   18s ease-in-out infinite alternate !important;
+
+        will-change: transform;
     }
 
-    .hero-content .eyebrow {
+}
+
+    .hero2 .hero-content {
+
+        padding-top: 270px;
+        padding-bottom: 65px;
+
+        padding-left: 24px;
+        padding-right: 24px;
+
+        justify-content: flex-end;
+    }
+
+    .hero2 .hero-content h1 {
+        font-size: 43px;
+        line-height: 1.3;
+    }
+
+    .hero2 .hero-content .eyebrow {
         font-size: 10px;
-        letter-spacing: .22em;
     }
 
-    .hero-content h1 {
-        font-size: 49px;
-    }
-
-    .hero-content .hero-tagline {
-        font-size: 11px;
-    }
-
-    .hero-content .lead {
+    .hero2 .hero-content .hero-tagline {
         font-size: 14px;
     }
 
-    .hero-actions {
-        align-items: stretch;
+    .hero2 .hero-actions {
+        gap: 8px;
+        max-width: 100%;
+    }
+
+    .hero2 .hero-actions .btn {
+        font-size: 11px;
+        padding: 12px 7px;
+    }
+
+
+
+
+/* EXTRA NARROW PHONES */
+
+@media (max-width: 360px) {
+
+    .hero2 .hero-actions {
         flex-direction: column;
-        max-width: 260px;
+        align-items: stretch;
     }
 
-    .hero-actions .btn {
-        padding: 12px 17px;
+    .hero2 .hero-actions .btn {
+        width: 100%;
+        flex: none;
+    }
+
+    .hero2 .hero-content {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+}
+
+/* ==========================================
+   PRIME RELAX - DESKTOP & TABLET TEXT POSITION
+========================================== */
+
+@media (min-width: 481px) {
+
+    .hero2 .hero-content {
+        transform: translateY(45px);
+    }
+
+}
+/* new code  */
+
+
+/* ==========================================
+   PRIME RELAX - MOBILE HERO POLISH
+   Preserve existing image crop
+========================================== */
+
+@media (max-width: 860px) {
+
+    /* IMAGE - NO ADDITIONAL ZOOM */
+
+    .hero2 .hero-bg::before {
+
+        background-size: cover;
+
+        /* Slightly shift photograph to the RIGHT */
+        background-position: 48% 35%;
+
+        transform: none !important;
+
+        /* Gentle horizontal movement */
+        animation: primeHeroMoveRight 30s ease-in-out infinite alternate !important;
+
+        will-change: background-position;
+    }
+
+    /* Move text block slightly lower to clear
+       the Prime Relax building signage */
+
+    .hero2 .hero-content {
+        padding-bottom: 48px;
+    }
+
+    /* WELLNESS EYEBROW */
+
+    .hero2 .hero-content .eyebrow {
+        transform: translateY(5px);
+
+        margin-bottom: 14px;
+        line-height: 1.6;
+    }
+
+    /* MAIN HEADING - ONE HORIZONTAL LINE */
+
+    .hero2 .hero-content h1 {
+
+        font-size: clamp(25px, 7.2vw, 36px);
+
+        line-height: 1.4;
+
+        white-space: nowrap;
+
+        max-width: 100%;
+
+        margin-bottom: 10px;
+    }
+
+    .hero2 .hero-content h1 br {
+        display: none;
+    }
+
+}
+
+
+/* ==========================================
+   SMALL PHONES
+========================================== */
+
+@media (max-width: 480px) {
+
+    .hero2 .hero-bg::before {
+
+        /*
+          Preserve your existing mobile crop.
+          74% instead of 76% shifts the image
+          slightly towards the RIGHT.
+        */
+
+        background-size: cover;
+        background-position: 74% center;
+
+        /* transform: none !important; */
+
+        /* Restore animation on small phones too */
+        animation: mobileHeroZoomOut 30s ease-in-out infinite alternate !important;
+    }
+
+    .hero2 .hero-content {
+
+        padding-top: 270px;
+        padding-bottom: 48px;
+    }
+
+    .hero2 .hero-content .eyebrow {
+
+        transform: translateY(-5px);
+
         font-size: 10px;
-        text-align: center;
+        margin-bottom: 14px;
+        color: black;
+        margin-top: 150px;
     }
+
+    .hero2 .hero-content h1 {
+
+        font-size: clamp(25px, 7.5vw, 33px);
+
+        white-space: nowrap;
+        line-height: 1.4;
+    }
+
+    .hero2 .hero-content h1 br {
+        display: none;
+    }
+
 }
 
-/* =========================================
-   IMAGE PAN ANIMATION
-========================================= */
 
-@keyframes spaHeroPan {
-    0% {
-        transform: scale(1.25) translateX(6%);
+/* ==========================================
+   SUBTLE IMAGE MOVEMENT
+========================================== */
+
+/* For medium-sized mobile screens */
+
+/* Medium mobile screens */
+@keyframes primeHeroMoveRight {
+
+    from {
+        background-position: 48% 35%;
     }
 
-    100% {
-        transform: scale(1.25) translateX(-6%);
+    to {
+        background-position: 55% 55%;
     }
+
 }
-/* Respect reduced-motion preferences */
-/* @media (prefers-reduced-motion: reduce) {
 
-    .hero-bg::before {
+@keyframes mobileHeroZoomOut {
+
+    from {
+        transform: scale(1.18);
+    }
+
+    to {
+        transform: scale(1.05);
+    }
+
+}
+
+/* Small mobile screens */
+
+
+/* ACCESSIBILITY */
+/* 
+@media (prefers-reduced-motion: reduce) {
+
+    .hero2 .hero-bg::before {
         animation: none !important;
     }
+
 } */
 
 /* =========================================
@@ -480,6 +815,74 @@ html[dir="rtl"] .hero-content .hero-tagline {
 html[dir="rtl"] body.home .hero-content {
     direction: ltr;
     text-align: left;
+}
+
+
+
+
+/* ==========================================
+   PRIME RELAX - FINAL HERO ANIMATIONS
+   Desktop + Tablet + Mobile
+========================================== */
+
+/* ------------------------------------------
+   2. TEXT RISE ANIMATION
+   Applies to ALL screen sizes
+------------------------------------------ */
+
+@keyframes primeHeroRise {
+
+    from {
+        opacity: 0;
+        transform: translate3d(0, 45px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+
+}
+
+
+/* Initial animation setup */
+
+.hero2 .hero-content .eyebrow,
+.hero2 .hero-content h1,
+.hero2 .hero-content .hero-tagline,
+.hero2 .hero-content .lead,
+.hero2 .hero-content .hero-actions {
+
+    opacity: 0;
+
+    animation-name: primeHeroRise !important;
+    animation-duration: 1.2s !important;
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1) !important;
+    animation-fill-mode: both !important;
+
+}
+
+
+/* Staggered entrance */
+
+.hero2 .hero-content .eyebrow {
+    animation-delay: 0.2s !important;
+}
+
+.hero2 .hero-content h1 {
+    animation-delay: 0.4s !important;
+}
+
+.hero2 .hero-content .hero-tagline {
+    animation-delay: 0.6s !important;
+}
+
+.hero2 .hero-content .lead {
+    animation-delay: 0.8s !important;
+}
+
+.hero2 .hero-content .hero-actions {
+    animation-delay: 1s !important;
 }
 
 /* =========================================
@@ -1511,7 +1914,7 @@ html[dir="rtl"] .strip-light .wrap > div {
 }
 
 .services-light .card h3 {
-  color: #14233e;
+  color: #000000;
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(1.45rem, 2vw, 1.8rem);
   font-weight: 600;
@@ -3522,7 +3925,7 @@ html[dir="rtl"] .traditional-hero-line {
   position: absolute;
   inset: 18px 0 0;
 
-  background: #0c1b37;
+  background: #000000;
   border: 1px solid rgba(201,164,92,.35);
   box-shadow: 0 14px 35px rgba(0,0,0,.3);
 
@@ -3760,6 +4163,7 @@ html[dir="rtl"] .services-submenu a {
 
   .hero2 .lead {
     font-size: 14px;
+    margin-top: 20px;
   }
 
   .hero2 .hero-actions .btn {
@@ -4644,4 +5048,117 @@ html[dir="rtl"] body.home .hero-content {
     .home .hero-bg {
         background-position: center 80%;
     }
+}
+
+
+/* ==========================================
+   PRIME RELAX - CENTERED HERO TEXT
+   ALL DEVICES
+========================================== */
+
+.hero2 .hero-content {
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center !important;
+
+    text-align: center !important;
+    direction: ltr;
+
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* EYEBROW */
+
+.hero2 .hero-content .eyebrow {
+
+    color: #111111 !important;
+
+    text-align: center !important;
+
+    width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* MAIN HEADING */
+
+.hero2 .hero-content h1 {
+
+    color: #111111 !important;
+
+    text-align: center !important;
+
+    width: 100%;
+    max-width: 1100px !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    white-space: nowrap;
+}
+
+/* Remove forced line break */
+
+.hero2 .hero-content h1 br {
+    display: none !important;
+}
+
+/* TAGLINE */
+
+.hero2 .hero-content .hero-tagline {
+
+    color: #111111 !important;
+
+    text-align: center !important;
+
+    width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* DESCRIPTION */
+
+.hero2 .hero-content .lead {
+
+    color: #111111 !important;
+
+    text-align: center !important;
+
+    max-width: 700px;
+
+    width: 100%;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* BUTTONS */
+
+.hero2 .hero-actions {
+
+    justify-content: center !important;
+
+    align-items: center;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ARABIC VERSION */
+
+html[dir="rtl"] .hero2 .hero-content,
+html[dir="rtl"] body.home .hero-content {
+
+    direction: ltr !important;
+    text-align: center !important;
+    align-items: center !important;
+}
+
+html[dir="rtl"] .hero2 .hero-content .hero-tagline {
+
+    text-align: center !important;
 }
